@@ -1,5 +1,5 @@
-# JKUAT Chatbot
-A versatile  **Python-based chatbot** built for JKUAT, providing instant access to university information. 
+# Amanda Chatbot
+Amanda Chatbot is **Python-based chatbot** built for JKUAT, providing instant access to university information. 
 It employs AIML for robust conversational flows and NLTK for natural language understanding.
 Designed with modularity in mind, this system can be readily adapted to serve as an informational assistant for any institution by simply updating its structured knowledge base and conversational rules.
 
