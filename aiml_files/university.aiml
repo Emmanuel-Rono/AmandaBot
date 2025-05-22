@@ -1,0 +1,69 @@
+ <category>
+        <pattern>WHICH SCHOOL ARE YOU ABOUT JKUAT</pattern>
+        <template>
+            <srai>ARE YOU ABOUT JKUAT</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHICH UNIVERSITY * YOU ABOUT JKUAT</pattern>
+        <template>
+            <srai>ARE YOU ABOUT JKUAT</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHICH SCHOOL ARE YOU ABOUT * JKUAT</pattern>
+        <template>
+            <srai>ARE YOU ABOUT JKUAT</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ARE YOU ABOUT * JKUAT</pattern>
+        <template>
+            <srai>ARE YOU ABOUT JKUAT</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ARE YOU ABOUT THE UNIVERSITY OF JKUAT</pattern>
+        <template>
+            <srai>ARE YOU ABOUT JKUAT</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT UNIVERSITY ARE YOU ABOUT JKUAT</pattern>
+        <template>
+            <srai>ARE YOU ABOUT JKUAT</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SCHOOL * JKUAT *</pattern>
+        <template><srai>ARE YOU ABOUT JKUAT</srai></template>
+    </category>
+    <category>
+        <pattern>* UNIVERSITY * JKUAT *</pattern>
+        <template><srai>ARE YOU ABOUT JKUAT</srai></template>
+    </category>
+
+  
+
+    <category>
+        <pattern>I DON'T UNDERSTAND *</pattern>
+        <template>
+            I'm sorry, I don't have specific information on that. Can you rephrase your question or ask about a general topic related to <get name="institution_name"/>?
+        </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>
+            I'm not sure how to answer that about <get name="institution_name"/>. Please try asking in a different way or check the official website of <get name="institution_name"/>.
+        </template>
+    </category>
+    <category><pattern>THANK YOU</pattern><template>You're welcome! Let me know if you have any more questions.</template></category>
+    <category><pattern>THANKS</pattern><template><srai>THANK YOU</srai></template></category>
+    <category><pattern>BYE</pattern><template>Goodbye! Have a great day.</template></category>
+    <category><pattern>GOODBYE</pattern><template><srai>BYE</srai></template></category>

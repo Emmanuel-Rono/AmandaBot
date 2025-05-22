@@ -1,0 +1,146 @@
+/* static/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Slightly more modern font */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Make sure body takes full viewport height */
+    background-color: #e0e0e0; /* A soft, neutral background */
+    overflow: hidden; /* Prevent body scroll if content overflows */
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 500px; /* Constrain overall chat width */
+    height: 80vh; /* Make it take 80% of viewport height */
+    min-height: 400px; /* Ensure minimum height on smaller screens */
+    display: flex;
+    flex-direction: column; /* Stack header, messages, input vertically */
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+    background-color: #ffffff;
+    overflow: hidden; /* Ensures rounded corners are respected */
+}
+
+.chat-header {
+    background-color: #007bff; /* Primary blue for header */
+    color: white;
+    padding: 15px 20px; /* Slightly more padding */
+    text-align: center;
+    font-size: 1.3em; /* Slightly larger font */
+    font-weight: 600; /* Bolder text */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-messages {
+    flex-grow: 1; /* This is key! It makes the message area take up all available vertical space */
+    padding: 15px;
+    overflow-y: auto; /* Enable vertical scrolling for messages if content exceeds height */
+    display: flex;
+    flex-direction: column; /* Stack messages vertically */
+    gap: 12px; /* More space between message bubbles */
+    background-color: #f5f7f9; /* Very light grey for message area background */
+    /* Ensure messages start from the top, not center (important with flex-grow) */
+    align-items: flex-start; /* Align messages to the start (left) by default */
+}
+
+/* Scrollbar styling (for WebKit browsers like Chrome, Safari) */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0; /* Darker scrollbar thumb */
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background-color: #e0e0e0; /* Lighter scrollbar track */
+}
+
+.message {
+    max-width: 85%; /* Slightly wider messages */
+    padding: 12px 18px; /* More padding inside bubbles */
+    border-radius: 22px; /* More rounded corners */
+    line-height: 1.5; /* Improve readability */
+    word-wrap: break-word; /* Essential for long sentences/words */
+    overflow-wrap: break-word; /* Modern equivalent */
+    color: #333; /* Darker text for readability */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+}
+
+.user-message {
+    align-self: flex-end; /* Align user messages to the right */
+    background-color: #007bff; /* User messages match header color */
+    color: white; /* White text for user messages */
+    border-bottom-right-radius: 5px; /* Slight tweak for bubble shape */
+}
+
+.bot-message {
+    align-self: flex-start; /* Align bot messages to the left */
+    background-color: #ffffff; /* White for bot messages */
+    color: #333;
+    border-bottom-left-radius: 5px; /* Slight tweak for bubble shape */
+}
+
+.typing-indicator {
+    background-color: #e0f2f7; /* Lighter blue/grey for typing */
+    font-style: italic;
+    color: #666;
+    animation: pulse 1.5s infinite;
+    padding: 10px 15px; /* Adjust padding to match other messages */
+    border-radius: 20px;
+    max-width: fit-content; /* Only take width of content */
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 12px 15px; /* More padding */
+    border: 1px solid #ced4da;
+    border-radius: 25px; /* More rounded */
+    margin-right: 10px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+#user-input:focus {
+    border-color: #007bff; /* Highlight border on focus */
+}
+
+#send-button {
+    background-color: #28a745; /* Green send button */
+    color: white;
+    border: none;
+    border-radius: 25px; /* More rounded */
+    padding: 12px 25px; /* More padding */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#send-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-1px); /* Subtle lift effect */
+}
+
+#send-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

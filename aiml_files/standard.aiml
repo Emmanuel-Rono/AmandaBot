@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8">
+    <category><pattern>HELLO</pattern><template>Hello there! How can I assist you today?</template></category>
+    <category><pattern>HI</pattern><template><srai>HELLO</srai></template></category>
+    <category><pattern>GOOD MORNING</pattern><template>Good morning! How may I help you?</template></category>
+    <category><pattern>GOOD AFTERNOON</pattern><template>Good afternoon! What can I do for you?</template></category>
+    <category><pattern>GOOD EVENING</pattern><template>Good evening! How can I be of assistance?</template></category>
+
+    <category><pattern>BYE</pattern><template>Goodbye! Have a great day.</template></category>
+    <category><pattern>GOODBYE</pattern><template><srai>BYE</srai></template></category>
+
+    <category><pattern>THANK YOU</pattern><template>You're welcome! Is there anything else I can help with?</template></category>
+    <category><pattern>THANKS</pattern><template><srai>THANK YOU</srai></template></category>
+
+    <category><pattern>WHAT IS YOUR NAME</pattern><template>My name is Amanda, your smart enquiry chatbot for JKUAT.</template></category>
+    <category><pattern>WHO ARE YOU</pattern><template><srai>WHAT IS YOUR NAME</srai></template></category>
+    <category><pattern>ARE YOU HUMAN</pattern><template>I am a computer program, an AI designed to help you with JKUAT information.</template></category>
+
+    <category><pattern>TELL ME ABOUT JKUAT</pattern><template>JKUAT is a leading institution in Kenya. What specifically would you like to know?</template></category>
+    <category><pattern>ABOUT JKUAT</pattern><template><srai>TELL ME ABOUT JKUAT</srai></template></category>
+</aiml>
